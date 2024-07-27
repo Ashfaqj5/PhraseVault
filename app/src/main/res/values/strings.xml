@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Week5Lab</string>
+    <string-array name="wordlist_categories">
+        <item>Alphabets</item>
+        <item>Alphanumeric</item>
+        <item>Numeric</item>
+        <item>Special Symbols</item>
+    </string-array>
+</resources>

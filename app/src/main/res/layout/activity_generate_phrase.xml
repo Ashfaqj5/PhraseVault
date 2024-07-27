@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activities.GeneratePhraseActivity">
+
+    <Spinner
+        android:id="@+id/spinner_wordlist_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/wordlist_categories" />
+
+    <EditText
+        android:id="@+id/edittext_passphrase_length"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter passphrase length"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textview_generated_phrase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:text="Generated Phrase will appear here" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_strength_meter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:max="100"
+        style="@android:style/Widget.ProgressBar.Horizontal" />
+
+    <Button
+        android:id="@+id/button_generate_phrase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate Phrase" />
+
+    <Button
+        android:id="@+id/button_copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copy" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+
+</LinearLayout>
