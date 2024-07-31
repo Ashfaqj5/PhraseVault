@@ -13,24 +13,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Week4Lab"
         tools:targetApi="33">
-        <activity
-            android:name=".activities.StudySetActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-
-        <activity
-            android:name=".activities.FlashcardSetActivity"
-            android:exported="false"></activity>
+<!--        <activity-->
+<!--            android:name=".activities.StudySetActivity"-->
+<!--            android:exported="false">-->
+<!--            <meta-data-->
+<!--                android:name="android.app.lib_name"-->
+<!--                android:value="" />-->
+<!--        </activity>-->
+        <activity android:name=".activities.SavedPhrasesActivity" />
+        <activity android:name=".activities.PhraseDetailsActivity" />
+        <activity android:name=".activities.AddPhraseActivity"/>
+<!--        <activity-->
+<!--            android:name=".activities.FlashcardSetActivity"-->
+<!--            android:exported="false"></activity>-->
+        <activity android:name=".activities.SavePasswordActivity" />
 
         <activity
             android:name=".activities.GeneratePhraseActivity"
             android:exported="false"></activity>
-        <activity
-            android:name=".activities.FlashcardSetDetailActivity"
-            android:exported="false"></activity>
+<!--        <activity-->
+<!--            android:name=".activities.FlashcardSetDetailActivity"-->
+<!--            android:exported="false"></activity>-->
         <activity
             android:name=".activities.MainActivity"
             android:exported="true">

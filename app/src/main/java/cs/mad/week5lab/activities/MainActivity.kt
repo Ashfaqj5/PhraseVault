@@ -31,7 +31,10 @@
 
 
             binding.cardSavedPhrases.setOnClickListener {
-                startActivity(Intent(this, FlashcardSetActivity::class.java))
+                startActivity(Intent(this, SavedPhrasesActivity::class.java))
+            }
+            binding.cardAddPhrases.setOnClickListener {
+                startActivity(Intent(this, AddPhraseActivity::class.java))
             }
         }
 
