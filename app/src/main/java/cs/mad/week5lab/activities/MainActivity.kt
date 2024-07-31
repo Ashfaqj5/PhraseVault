@@ -55,7 +55,9 @@
                 override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
                     super.onAuthenticationError(errorCode, errString)
                     Log.e("Biometric", "Authentication error: $errString")
-                    // Optionally handle the error and proceed without biometric authentication
+                    if (errorCode == BiometricPrompt.ERROR_NEGATIVE_BUTTON) {
+                        finish() // Close the app if the user cancels the biometric prompt
+                    }
                 }
 
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
