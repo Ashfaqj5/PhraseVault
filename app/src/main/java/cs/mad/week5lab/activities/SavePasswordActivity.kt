@@ -64,6 +64,7 @@ import androidx.lifecycle.lifecycleScope
 import cs.mad.week5lab.R
 import cs.mad.week5lab.database.AppDatabase
 import cs.mad.week5lab.database.PasswordEntity
+import cs.mad.week5lab.utils.EncryptionUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -101,11 +102,12 @@ class SavePasswordActivity : AppCompatActivity() {
     private fun savePasswordDetails() {
         val name = editTextName.text.toString()
         val password = editTextPassword.text.toString()
+        val encryptedPassword = EncryptionUtils.encrypt(password)
         val url = editTextUrl.text.toString()
         val extra = editTextExtra.text.toString()
 
         // Create a new password entity
-        val passwordEntity = PasswordEntity(name = name, password = password, url = url, extra = extra)
+        val passwordEntity = PasswordEntity(name = name, password = encryptedPassword, url = url, extra = extra)
 
         // Save the password entity to the database within a coroutine
         lifecycleScope.launch {

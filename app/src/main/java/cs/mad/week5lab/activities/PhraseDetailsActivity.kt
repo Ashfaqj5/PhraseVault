@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import cs.mad.week5lab.R
 import cs.mad.week5lab.database.AppDatabase
+import cs.mad.week5lab.utils.EncryptionUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -51,7 +52,7 @@ class PhraseDetailsActivity : AppCompatActivity() {
             println("phrase1234$phrase")
             phrase?.let {
                 textViewName.text = it.name
-                textViewPassword.text = it.password
+                textViewPassword.text = EncryptionUtils.decrypt(it.password)
                 textViewUrl.text = it.url
                 textViewExtra.text = it.extra
             }

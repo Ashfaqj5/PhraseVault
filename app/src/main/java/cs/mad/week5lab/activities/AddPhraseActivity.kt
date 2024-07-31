@@ -8,6 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import cs.mad.week5lab.R
 import cs.mad.week5lab.database.AppDatabase
 import cs.mad.week5lab.database.PasswordEntity
+import cs.mad.week5lab.utils.EncryptionUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -44,7 +45,7 @@ class AddPhraseActivity : AppCompatActivity() {
         val url = editTextUrl.text.toString()
         val extra = editTextExtra.text.toString()
 
-        val passwordEntity = PasswordEntity(name = name, password = password, url = url, extra = extra)
+        val passwordEntity = PasswordEntity(name = name, password = EncryptionUtils.encrypt(password), url = url, extra = extra)
 
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
