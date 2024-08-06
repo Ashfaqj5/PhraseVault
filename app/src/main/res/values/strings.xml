@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Week5Lab</string>
+    <string name="app_name">Phrase Vault</string>
     <string-array name="wordlist_categories">
         <item>Alphabets</item>
         <item>Alphanumeric</item>
