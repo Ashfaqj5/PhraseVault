@@ -1,4 +1,4 @@
-package cs.mad.week5lab.database
+package cs.mad.todoapp.database
 
 import android.content.Context
 import androidx.room.Database

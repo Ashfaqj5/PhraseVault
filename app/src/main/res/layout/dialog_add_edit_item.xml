@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your task"
+        android:inputType="textMultiLine"
+        tools:ignore="MissingConstraints"
+
+        android:lines="2"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

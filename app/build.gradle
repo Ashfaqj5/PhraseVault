@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'cs.mad.week5lab'
+    namespace 'cs.mad.todoapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "cs.mad.week5lab"
+        applicationId "cs.mad.todoapp"
         minSdk 24
         targetSdk 33
         versionCode 1
